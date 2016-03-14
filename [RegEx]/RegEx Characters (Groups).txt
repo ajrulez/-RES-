@@ -1,0 +1,329 @@
+
+☀▐▌▒▓▒▐▌══════════════════════▐▌▒▓▒▐▌▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄¦⌠
+☀▐▌▓▒▓▐▌                      ▐▌▓▒▓▐▌▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓‡
+☀▐▌▒▓▒▐▌      { Groups }      ▐▌▒▓▒▐▌██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████c3
+☀▐▌▓▒▓▐▌                      ▐▌▓▒▓▐▌▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓‡
+☀▐▌▒▓▒▐▌══════════════════════▐▌▒▓▒▐▌▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀¦⌡
+
+rx_Symbols ___SINGLE_ESCAPES_@_ALL_&_DOUBLE_@_QUOTES___ = "\\\{\}\[\]\(\)\*\|\^\-\$\.\+\?\/\\'\\"\:\!\&\`\,\@\=\#\%\;\~\_\<\>"
+rx_Symbols ___REQUIRED_ESCAPES_ONLY___                  = "\\\{\}\[\]\(\)\*\|\^\-\$\.\+\?\/'":!&`,@=#%;~_<>"
+rx_Symbols ___@__PYTHON___                              = "\\\\\\{\\}\\[\\]\\(\\)\\*\\|\\^\\-\\$\\.\\+\\?\\/\\\'\\\"\\:\\!\\&\\`\\,\\@\\=\\#\\%\\;\\~\\_\\<\\>"
+
+rx_Space    = "\ "
+rx_Tab      = "\t"
+rx_NewLines = "\n\v\f\r"
+
+rx_Numeric          = "0-9"
+rx_Alphabetic_Upper = "A-Z"
+rx_Alphabetic_Lower = "a-z"
+
+rx_LineSpace  = rx_Space + rx_Tab
+rx_WhiteSpace = rx_LineSpace + rx_NewLines
+
+rx_Alphabetic_All     = rx_Alphabetic_Upper + rx_Alphabetic_Lower
+rx_AlphaNumeric_Upper = rx_Numeric + rx_Alphabetic_Upper
+rx_AlphaNumeric_Lower = rx_Numeric + rx_Alphabetic_Lower
+rx_AlphaNumeric_All   = rx_Numeric + rx_Alphabetic_All
+
+rx_ValidCharacters = rx_AlphaNumeric_All + rx_Symbols
+
+rx_ValidCharacters_WithWhiteSpace = rx_ValidCharacters + rx_WhiteSpace
+rx_ValidCharacters_WithLineSpace  = rx_ValidCharacters + rx_LineSpace
+
+☀▐▌▒▓▒▐▌══════════════════════════▐▌▒▓▒▐▌▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄¦⌠
+☀▐▌▓▒▓▐▌                          ▐▌▓▒▓▐▌▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓‡
+☀▐▌▒▓▒▐▌      { Characters }      ▐▌▒▓▒▐▌██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████c3
+☀▐▌▓▒▓▐▌                          ▐▌▓▒▓▐▌▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓‡
+☀▐▌▒▓▒▐▌══════════════════════════▐▌▒▓▒▐▌▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀¦⌡
+
+	☀▓▓▓▓▓      •   Escapes      ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓⌠¦•g1⌡
+
+rx_Octal_Escape             = "\000"
+rx_Hexadecimal_Escape       = "\xFF"
+rx_Unicode_Escape           = "\uFFFF"
+rx_Control_Character escape = "\cI"
+
+	☀▓▓▓▓▓      •   WhiteSpace      ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓⌠¦•g1⌡
+
+rx_Tab             = "\t"
+rx_Line_Feed       = "\n"
+rx_Carriage_Return = "\r"
+rx_Form_Feed       = "\f"
+rx_Vertical_Tab    = "\v"
+rx_Null            = "\0"
+
+	☀▓▓▓▓▓      •   Symbols ( Escape Required )      ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓⌠¦•g1⌡
+
+rx_Back_Slash       = "\\"          literal     =     \
+rx_L_Brace          = "\{"          literal     =     {
+rx_R_Brace          = "\}"          literal     =     }
+rx_L_Bracket        = "\["          literal     =     [
+rx_R_Bracket        = "\]"          literal     =     ]
+rx_L_Paren          = "\("          literal     =     (
+rx_R_Paren          = "\)"          literal     =     )
+rx_Asterisk         = "\*"          literal     =     *
+rx_Bar              = "\|"          literal     =     |
+rx_Caret            = "\^"          literal     =     ^
+rx_Dash             = "\-"          literal     =     -
+rx_Dollar sign      = "\$"          literal     =     $
+rx_Period           = "\."          literal     =     .
+rx_Plus sign        = "\+"          literal     =     +
+rx_Question mark    = "\?"          literal     =     ?
+rx_Forward_Slash    = "\/"          literal     =     /
+
+	☀▓▓▓▓▓      •   Symbols ( Double Escape Recommended )      ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓⌠¦•g1⌡
+
+rx_Single_Quote     = "\\'"         literal     =     '
+rx_Double_Quote     = "\\""         literal     =     "
+
+	☀▓▓▓▓▓      •   Symbols ( Escape Recommended )      ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓⌠¦•g1⌡
+
+rx_Colon            = "\:"          literal     =     :
+rx_Exclamation mark = "\!"          literal     =     !
+
+	☀▓▓▓▓▓      •   Symbols ( Escape Unnecessary )      ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓⌠¦•g1⌡
+
+rx_Ampersand        = "\&"          literal     =     &
+rx_Backtick         = "\`"          literal     =     `
+rx_Comma            = "\,"          literal     =     ,
+rx_Commercial_At    = "\@"          literal     =     @
+rx_Equals_Sign      = "\="          literal     =     =
+rx_Number_Sign      = "\#"          literal     =     #
+rx_Percent_Sign     = "\%"          literal     =     %
+rx_Semicolon        = "\;"          literal     =     ;
+rx_Tilde            = "\~"          literal     =     ~
+rx_Underscore       = "\_"          literal     =     _
+rx_L_Angle          = "\<"          literal     =     <
+rx_R_Angle          = "\>"          literal     =     >
+
+☀▐▌▒▓▒▐▌═════════════════════▐▌▒▓▒▐▌▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄¦⌠
+☀▐▌▓▒▓▐▌                     ▐▌▓▒▓▐▌▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓‡
+☀▐▌▒▓▒▐▌      { Tests }      ▐▌▒▓▒▐▌███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████c3
+☀▐▌▓▒▓▐▌                     ▐▌▓▒▓▐▌▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓‡
+☀▐▌▒▓▒▐▌═════════════════════▐▌▒▓▒▐▌▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀¦⌡
+
+	☀▐▌»»▒▐▌────────────────────▐▌▒««▐▌_________________________________________________________________________________________________________________________________________________________________¦•⌠
+	☀▐▌»»▒▐▌    •   Python      ▐▌▒««▐▌░╬░╬░╬░╬░╬░╬░╬░╬░╬░╬░╬░╬░╬░╬░╬░╬░╬░╬░╬░╬░╬░╬░╬░╬░╬░╬░╬░╬░╬░╬░╬░╬░╬░╬░╬░╬░╬░╬░╬░╬░╬░╬░╬░╬░╬░╬░╬░╬░╬░╬░╬░╬░╬░╬░╬░╬░╬░╬░╬░╬░╬░╬░╬░╬░╬░╬░╬░╬░╬░╬░╬░╬░╬░╬░╬░╬░╬░╬░╬░╬░╬m2
+	☀▐▌»»▒▐▌────────────────────▐▌▒««▐▌‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾¦•⌡
+
+		☀▓▓▓▓▓      • •   [Script]      ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓⌠¦••g1⌡
+
+char_Group = []
+rx_Group   = []
+
+
+
+_____INITIALIZE_ARRAYS_HERE_____
+
+
+
+groupCount = len ( char_Group )
+
+for index in range ( 0, groupCount ):
+
+	char         = char_Group[ index ]
+	rx           = rx_Group[ index ]
+	searchResult = re.search( "((" + rx + ").*)", " " + char + " " )
+
+	if searchResult == None:
+		print ( "NO MATCH FOUND" )
+	else:
+		searchResult_Text = searchResult.group ( 0 )
+		print ( searchResult_Text )
+
+		☀▓▓▓▓▓      • •   [Initialize] Single Escaped      ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓⌠¦••g1⌡
+
+char_Group.append ( "\" )
+rx_Group.append ( "\\" )
+
+char_Group.append ( "{" )
+rx_Group.append ( "\{" )
+
+char_Group.append ( "}" )
+rx_Group.append ( "\}" )
+
+char_Group.append ( "[" )
+rx_Group.append ( "\[" )
+
+char_Group.append ( "]" )
+rx_Group.append ( "\]" )
+
+char_Group.append ( "(" )
+rx_Group.append ( "\(" )
+
+char_Group.append ( ")" )
+rx_Group.append ( "\)" )
+
+char_Group.append ( "*" )
+rx_Group.append ( "\*" )
+
+char_Group.append ( "|" )
+rx_Group.append ( "\|" )
+
+char_Group.append ( "^" )
+rx_Group.append ( "\^" )
+
+char_Group.append ( "-" )
+rx_Group.append ( "\-" )
+
+char_Group.append ( "$" )
+rx_Group.append ( "\$" )
+
+char_Group.append ( "." )
+rx_Group.append ( "\." )
+
+char_Group.append ( "+" )
+rx_Group.append ( "\+" )
+
+char_Group.append ( "?" )
+rx_Group.append ( "\?" )
+
+char_Group.append ( "/" )
+rx_Group.append ( "\/" )
+
+char_Group.append ( "'" )
+rx_Group.append ( "\\'" )
+
+char_Group.append ( "\"" )
+rx_Group.append ( "\\"" )
+
+char_Group.append ( ":" )
+rx_Group.append ( "\:" )
+
+char_Group.append ( "!" )
+rx_Group.append ( "\!" )
+
+char_Group.append ( "&" )
+rx_Group.append ( "\&" )
+
+char_Group.append ( "`" )
+rx_Group.append ( "\`" )
+
+char_Group.append ( "," )
+rx_Group.append ( "\," )
+
+char_Group.append ( "@" )
+rx_Group.append ( "\@" )
+
+char_Group.append ( "=" )
+rx_Group.append ( "\=" )
+
+char_Group.append ( "#" )
+rx_Group.append ( "\#" )
+
+char_Group.append ( "%" )
+rx_Group.append ( "\%" )
+
+char_Group.append ( ";" )
+rx_Group.append ( "\;" )
+
+char_Group.append ( "~" )
+rx_Group.append ( "\~" )
+
+char_Group.append ( "_" )
+rx_Group.append ( "\_" )
+
+char_Group.append ( "<" )
+rx_Group.append ( "\<" )
+
+char_Group.append ( ">" )
+rx_Group.append ( "\>" )
+
+		☀▓▓▓▓▓      • •   [Initialize] Double Escaped      ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓⌠¦••g1⌡
+
+char_Group.append ( "\\" )
+rx_Group.append ( "\\\\" )
+
+char_Group.append ( "{" )
+rx_Group.append ( "\\{" )
+
+char_Group.append ( "}" )
+rx_Group.append ( "\\}" )
+
+char_Group.append ( "[" )
+rx_Group.append ( "\\[" )
+
+char_Group.append ( "]" )
+rx_Group.append ( "\\]" )
+
+char_Group.append ( "(" )
+rx_Group.append ( "\\(" )
+
+char_Group.append ( ")" )
+rx_Group.append ( "\\)" )
+
+char_Group.append ( "*" )
+rx_Group.append ( "\\*" )
+
+char_Group.append ( "|" )
+rx_Group.append ( "\\|" )
+
+char_Group.append ( "^" )
+rx_Group.append ( "\\^" )
+
+char_Group.append ( "-" )
+rx_Group.append ( "\\-" )
+
+char_Group.append ( "$" )
+rx_Group.append ( "\\$" )
+
+char_Group.append ( "." )
+rx_Group.append ( "\\." )
+
+char_Group.append ( "+" )
+rx_Group.append ( "\\+" )
+
+char_Group.append ( "?" )
+rx_Group.append ( "\\?" )
+
+char_Group.append ( "/" )
+rx_Group.append ( "\\/" )
+
+char_Group.append ( "'" )
+rx_Group.append ( "\\\'" )
+
+char_Group.append ( "\"" )
+rx_Group.append ( "\\\"" )
+
+char_Group.append ( ":" )
+rx_Group.append ( "\\:" )
+
+char_Group.append ( "!" )
+rx_Group.append ( "\\!" )
+
+char_Group.append ( "&" )
+rx_Group.append ( "\\&" )
+
+char_Group.append ( "`" )
+rx_Group.append ( "\\`" )
+
+char_Group.append ( "," )
+rx_Group.append ( "\\," )
+
+char_Group.append ( "@" )
+rx_Group.append ( "\\@" )
+
+char_Group.append ( "=" )
+rx_Group.append ( "\\=" )
+
+char_Group.append ( "#" )
+rx_Group.append ( "\\#" )
+
+char_Group.append ( "%" )
+rx_Group.append ( "\\%" )
+
+char_Group.append ( ";" )
+rx_Group.append ( "\\;" )
+
+char_Group.append ( "~" )
+rx_Group.append ( "\\~" )
+
+char_Group.append ( "_" )
+rx_Group.append ( "\\_" )
+
+char_Group.append ( "<" )
+rx_Group.append ( "\\<" )
+
+char_Group.append ( ">" )
+rx_Group.append ( "\\>" )
+

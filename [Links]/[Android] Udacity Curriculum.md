@@ -14,7 +14,7 @@
 [**Developing Android Apps**](https://www.udacity.com/course/developing-android-apps--ud853)  
 [**Material Design for Android Developers**](https://www.udacity.com/course/material-design-for-android-developers--ud862)  
 &nbsp;  
-[**Add Google Sign In to your Android Apps**](https://www.udacity.com/course/add-google-sign-in-to-your-android-apps--ud876-5)  
+[**Add Google Sign-In to your Android Apps**](https://www.udacity.com/course/add-google-sign-in-to-your-android-apps--ud876-5)  
 [**Monetize your Android App with Ads**](https://www.udacity.com/course/monetize-your-android-app-with-ads--ud876-3)  
 [**Add Google Maps to your Android App**](https://www.udacity.com/course/add-google-maps-to-your-android-app--ud876-4)  
 [**Google Location Services on Android**](https://www.udacity.com/course/google-location-services-on-android--ud876-1)  

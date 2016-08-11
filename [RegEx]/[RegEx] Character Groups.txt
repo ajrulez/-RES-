@@ -343,4 +343,3 @@ rx__Group.append ( "\\<" )
 
 char_Group.append ( ">" )
 rx__Group.append ( "\\>" )
-

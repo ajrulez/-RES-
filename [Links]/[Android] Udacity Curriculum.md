@@ -1,6 +1,6 @@
 # Android Courses @ Udacity
 
-Includes all Nanodegree & non-Nanodegree courses.
+Includes all Nanodegree & non-Nanodegree courses, structured into a linear curriculum.
 
 All courses can be taken for free, although you must sign up for the Nanodegree program if you want to receive the certificate of completion.
 

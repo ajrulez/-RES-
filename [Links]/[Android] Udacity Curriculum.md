@@ -1,4 +1,4 @@
-## Beginner
+# Beginner
 
 ### Java
 [Basics](https://www.udacity.com/course/java-programming-basics--ud282)  
@@ -11,7 +11,7 @@
 [Basics: Networking](https://www.udacity.com/course/android-basics-networking--ud843)  
 [Ux Design for Mobile Developers](https://www.udacity.com/course/ux-design-for-mobile-developers--ud849)  
 
-## Intermediate
+# Intermediate
 
 ### Android:Core
 [Developing Apps](https://www.udacity.com/course/developing-android-apps--ud853)  
@@ -28,7 +28,7 @@
 [2D Game Development with libGDX](https://www.udacity.com/course/2d-game-development-with-libgdx--ud405)  
 [How to Make a Platformer Using libGDX](https://www.udacity.com/course/how-to-make-a-platformer-using-libgdx--ud406)  
 
-## Advanced
+# Advanced
 
 ### Android:Core
 [Advanced Android App Development](https://www.udacity.com/course/advanced-android-app-development--ud855)  

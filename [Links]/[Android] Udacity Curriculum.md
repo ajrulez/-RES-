@@ -4,6 +4,8 @@ Includes all Nanodegree & non-Nanodegree courses.
 
 All courses can be taken for free, although you must sign up for the Nanodegree program if you want to receive the certificate of completion.
 
+Please post any comments, feedback, or updates @ [**Reddit**](https://www.reddit.com/r/androiddev/comments/4xgceu/entire_udacity_android_curriculum_nanodegree/)
+
 -----
 
 ## Beginner

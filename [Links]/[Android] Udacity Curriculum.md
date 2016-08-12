@@ -18,6 +18,8 @@ All courses can be taken for free, although you must sign up for the Nanodegree 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Basics: Networking](https://www.udacity.com/course/android-basics-networking--ud843)  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[UX Design](https://www.udacity.com/course/ux-design-for-mobile-developers--ud849)  
 
+-----
+
 ## Intermediate
 
 ### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Core
@@ -32,6 +34,8 @@ All courses can be taken for free, although you must sign up for the Nanodegree 
 ### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Games
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[2D Game Development with libGDX](https://www.udacity.com/course/2d-game-development-with-libgdx--ud405)  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[How to Make a Platformer using libGDX](https://www.udacity.com/course/how-to-make-a-platformer-using-libgdx--ud406)  
+
+-----
 
 ## Advanced
 
